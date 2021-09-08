@@ -66,11 +66,11 @@ export default function App({ $target }) {
     fetchPostList();
     const { pathname } = window.location;
 
-    if (pathname.indexOf("/documents/") === 0) {
-      const [, , id] = pathname.split("/");
+    if (pathname.indexOf("/deploy_sample/documents/") === 0) {
+      const [, , , id] = pathname.split("/");
       postEditPage.setState({ id });
       $editorContainer.className = "editor";
-    } else if (pathname === "/") {
+    } else if (pathname === "/deploy_sample/") {
       $editorContainer.className = "editor invisible";
     }
   };
